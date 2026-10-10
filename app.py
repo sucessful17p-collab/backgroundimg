@@ -224,7 +224,6 @@ with tab_batch:
             )
             with st.expander("Preview processed files"):
                 for name, data in outputs:
-                    st.image(data, caption=name, use_column_width=True)
-
+                    st.image(data, caption=name, width=700)
 st.divider()
 st.caption("Runs locally in your browser via a local Streamlit server. No API key is required.")
