@@ -1,3 +1,4 @@
+
 streamlit==1.38.0
 rembg[cpu]==2.0.61
 Pillow>=10.3,<12
