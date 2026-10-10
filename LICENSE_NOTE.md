@@ -1,0 +1,1 @@
+This project is a wrapper application. The `rembg`, model weights, and its dependencies are third-party components with their own licenses and terms. Review those terms before redistribution or commercial use. This ZIP does not bundle third-party model weights.
