@@ -145,7 +145,7 @@ with tab_single:
             left, right = st.columns(2)
             with left:
                 st.subheader("Original")
-                st.image(source, use_container_width=True)
+                st.image(source, use_column_width=True)
             if st.button("Remove background", type="primary", key="remove_single"):
                 with st.spinner("Loading local model and removing background… first run can take longer."):
                     session = get_session(model_name)
@@ -166,10 +166,10 @@ with tab_single:
                 with right:
                     st.subheader("Result")
                     if mode == "Transparent PNG":
-                        st.image(result_image, use_container_width=True)
+                        st.image(result_image, use_column_width=True)
                         st.caption("Checkerboard transparency is represented by the viewer.")
                     else:
-                        st.image(result_image.convert("RGB"), use_container_width=True)
+                        st.image(result_image.convert("RGB"), use_column_width=True)
                 st.download_button(
                     "Download result (PNG)",
                     data=result_bytes,
@@ -224,7 +224,7 @@ with tab_batch:
             )
             with st.expander("Preview processed files"):
                 for name, data in outputs:
-                    st.image(data, caption=name, use_container_width=True)
+                    st.image(data, caption=name, use_column_width=True)
 
 st.divider()
 st.caption("Runs locally in your browser via a local Streamlit server. No API key is required.")
